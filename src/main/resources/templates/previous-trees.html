@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Results</title>
+</head>
+<body th:replace="layout :: body">
+    <div th:fragment="content">
+        <ul>
+            <li th:each="tree : ${trees}">
+                <p>Input: <span th:text="${tree.inputNumbers}"></span></p>
+                <p>Inorder Traversal: <span th:text="${tree.treeRepresentation}"></span></p>
+            </li>
+        </ul>
+        <a href="/enter-numbers" class="button">Back</a>
+    </div>
+</body>
+</html>

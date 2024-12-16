@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Numbers</title>
+</head>
+<body>
+    <h1>Enter Numbers</h1>
+    <form action="/process-numbers" method="post">
+        <label for="numbers">Numbers:</label>
+        <input type="text" id="numbers" name="numbers" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Previously Entered Numbers</h2>
+    <ul>
+        <li th:each="input : ${savedInputs}" th:text="${input.numbers}"></li>
+    </ul>
+</body>
+</html>
